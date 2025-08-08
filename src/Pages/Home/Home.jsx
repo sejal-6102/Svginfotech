@@ -3,6 +3,8 @@ import Hero from './Hero'
 import ServiceSection from './ServiceSection'
 import Ourservices from './Ourservice'
 import DesignDepartment from './DesignDepartment'
+import WhatWeDo from './WhatWeDo'
+import MockupGrid from './MockupGrid'
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
     <ServiceSection />
     <Ourservices />
     <DesignDepartment />
+    <WhatWeDo />
+    <MockupGrid />
       
     </div>
   )

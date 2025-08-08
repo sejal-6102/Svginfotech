@@ -19,7 +19,7 @@ export default function DesignDepartment() {
 
   // Intersection Observer hook
   const { ref, inView } = useInView({
-    triggerOnce: true, // Only trigger once
+    triggerOnce: false, // Only trigger once
     threshold: 0.3,    // 30% visible then start animation
   });
 

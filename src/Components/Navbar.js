@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="assets/img/logo.png"
+            src="/assets/img/logo.png"
             alt="Logo"
             className="h-14 md:h-16 object-contain"
           />

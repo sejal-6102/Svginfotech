@@ -5,7 +5,7 @@ import AOS from "aos";
 
 export default function Ourservices() {
   React.useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: false });
   }, []);
 
   const services = [
