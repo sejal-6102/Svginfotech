@@ -1,39 +1,36 @@
-// /components/Glow.jsx
 
 import React from 'react';
 import clsx from 'clsx';
 
-export default function Glow({ position = 'right' }) {
-  const sizeInPx = 600; 
-  const halfSizeNegative = `-${sizeInPx / 2}px`;
 
-  const positionClasses = {
-    right: `top-60 -translate-y-1/4`,
-    left: `top-1/2 -translate-y-1/2`,
+export default function Glow({ position = 'right', size = 600, customStyles = {} }) {
+  
+  const halfSizeNegative = `-${size / 2}px`;
+
+
+  const defaultPositionStyles = {
+    right: { top: '0', transform: 'translateY(-25%)', right: halfSizeNegative },
+    left: { top: '50%', transform: 'translateY(-50%)', left: halfSizeNegative },
   };
 
-  const positionStyles = {
-    right: { right: halfSizeNegative },
-    left: { left: halfSizeNegative },
+
+  const finalStyles = {
+    width: `${size}px`, 
+    height: `${size}px`, 
+    ...defaultPositionStyles[position],
+    ...customStyles,
   };
 
   return (
     <div
-      className={clsx(
-        // ✅ सबसे ज़रूरी बदलाव: इसे वापस 'absolute' करें
-        'absolute z-0 pointer-events-none',
-        positionClasses[position]
-      )}
-      style={{ 
-        width: `${sizeInPx}px`, 
-        height: `${sizeInPx}px`, 
-        ...positionStyles[position] 
-      }}
+      className={clsx('absolute z-0 pointer-events-none')}
+      // ✅ स्टेप 3: यहाँ finalStyles का इस्तेमाल करें
+      style={finalStyles}
     >
       <div
         className="w-full h-full rounded-full 
-                   border-[60px] border-[#BFF747] 
-                   opacity-40 filter blur-3xl"
+                   border-[60px] border-[#BFF747]
+                   opacity-30 filter blur-3xl"
       ></div>
     </div>
   );

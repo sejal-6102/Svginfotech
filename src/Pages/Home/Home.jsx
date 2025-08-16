@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Navbar from '../../Components/Navbar';
 import Banner from './Banner';
 import AboutAgency from './AboutAgency';
+import OurServices from './OurServices';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
 
         <Banner />
         <AboutAgency />
+        <OurServices />
 
       </div> 
       {/* रैपर div यहाँ खत्म होता है */}
