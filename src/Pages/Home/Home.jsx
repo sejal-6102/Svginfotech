@@ -6,20 +6,17 @@ import Navbar from '../../Components/Navbar';
 import Banner from './Banner';
 import AboutAgency from './AboutAgency';
 import OurServices from './OurServices';
+import JoinAgency from './JoinAgency';
 
 export default function Home() {
   return (
-    // स्टेप 1: मुख्य <main> टैग को सरल रखें, यहाँ कोई overflow नहीं।
+  
     <main className='bg-black'>
       
-      {/* 
-        ✅✅✅ समाधान यहाँ है ✅✅✅
-        एक नया 'div' बनाएँ जो आपके सारे सेक्शन्स को रैप करेगा।
-        इस पर 'overflow-x-hidden' लगाएँ।
-      */}
+     
       <div className="">
         
-        {/* अब आपके सारे कॉम्पोनेंट्स इस रैपर के अंदर हैं */}
+      
         <div className='relative z-20'>
           <Navbar />
           <Hero />
@@ -28,6 +25,7 @@ export default function Home() {
         <Banner />
         <AboutAgency />
         <OurServices />
+        <JoinAgency />
 
       </div> 
       {/* रैपर div यहाँ खत्म होता है */}
