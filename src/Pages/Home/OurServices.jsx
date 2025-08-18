@@ -9,12 +9,7 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { HiOutlinePresentationChartLine, HiOutlineLightBulb } from "react-icons/hi";
 
 export default function OurServices() {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 800,
-  //     once: true,
-  //   });
-  // }, []);
+
 
   const services = [
     {
@@ -38,7 +33,6 @@ export default function OurServices() {
   return (
     <section className="relative w-full bg-black text-white py-24 px-4 sm:px-8 font">
       
-      {/* ---------- हिस्सा 1: बैनर (इसमें कोई बदलाव नहीं) ---------- */}
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
         <Glow
           position="left"
@@ -69,12 +63,9 @@ export default function OurServices() {
         </div>
       </div>
 
-      {/* ---------- हिस्सा 2: सर्विस कार्ड्स (पूरी तरह से नया) ---------- */}
       <div className="relative z-20 max-w-7xl mx-auto">
-        {/* बैकग्राउंड में ग्लो */}
        
 
-        {/* सर्विस कार्ड्स के लिए ग्रिड */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {services.map((service, i) => (
@@ -91,7 +82,6 @@ export default function OurServices() {
               }}
              
             >
-              {/* ऊपर का हिस्सा: आइकॉन और एरो */}
               <div className="flex items-start justify-between">
                 <span className="text-5xl text-[#BFF747]"  data-aos="fade-up" data-aos-anchor-placement="center-bottom">{service.icon}</span>
                 <div className="text-3xl text-[#BFF747] group-hover:rotate-45 transition-transform duration-300">
@@ -99,7 +89,6 @@ export default function OurServices() {
                 </div>
               </div>
               
-              {/* नीचे का हिस्सा: टाइटल और डिस्क्रिप्शन */}
               <div>
                 <h2 className="text-2xl font-bold mb-3 font"  data-aos="fade-up" data-aos-anchor-placement="center-bottom">{service.title}</h2>
                 <p className="text-gray-400 leading-relaxed font"  data-aos="fade-up" data-aos-anchor-placement="center-bottom">{service.desc}</p>

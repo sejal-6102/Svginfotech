@@ -7,6 +7,10 @@ import Banner from './Banner';
 import AboutAgency from './AboutAgency';
 import OurServices from './OurServices';
 import JoinAgency from './JoinAgency';
+import Expertise from './Expertise';
+import Testimonials from './Testimonials';
+import Footer from '../../Components/Footer';
+import LetsCollaborate from '../../Components/LetsCollaborate';
 
 export default function Home() {
   return (
@@ -25,7 +29,13 @@ export default function Home() {
         <Banner />
         <AboutAgency />
         <OurServices />
+        <Expertise />
         <JoinAgency />
+        <Testimonials />
+        <LetsCollaborate />
+        <Footer />
+      
+        
 
       </div> 
       {/* रैपर div यहाँ खत्म होता है */}
