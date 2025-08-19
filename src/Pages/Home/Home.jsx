@@ -11,6 +11,8 @@ import Expertise from './Expertise';
 import Testimonials from './Testimonials';
 import Footer from '../../Components/Footer';
 import LetsCollaborate from '../../Components/LetsCollaborate';
+import Whychosse from './Whychosse';
+import FeaturesSection from './FeaturesSection'
 
 export default function Home() {
   return (
@@ -29,6 +31,9 @@ export default function Home() {
         <Banner />
         <AboutAgency />
         <OurServices />
+        <Whychosse />
+        <FeaturesSection
+         />
         <Expertise />
         <JoinAgency />
         <Testimonials />

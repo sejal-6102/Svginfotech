@@ -20,9 +20,10 @@ const featuresData = [
 ];
 
 const testimonialsData = [
-  { id: 1, logo:"https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1887&auto=format&fit=crop", text: "The team transformed our brand's online presence with creativity and precision. The results exceeded our expectations! Their digital marketing strategies helped us reach a broader audience and significantly boosted our sales.", authorImage: "https://images.unsplash.com/photo-1599566150163-2DCAAD36?q=80&w=1887&auto=format&fit=crop", authorName: "Sarah Mitchell", authorTitle: "Marketing Director", stars: 5 },
-  { id: 2, logo: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1887&auto=format&fit=crop", text: "Working with this agency was a game-changer. Their innovative approach and dedication to our project were remarkable. We saw a significant increase in user engagement within the first month.", authorImage: "https://images.unsplash.com/photo-1507003211169-0A1DD7228F2D?q=80&w=1887&auto=format&fit=crop", authorName: "Johnathan Lee", authorTitle: "Product Manager", stars: 5 },
-  { id: 3, logo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop", text: "From start to finish, the process was seamless. Their team is not only talented but also incredibly responsive. I would highly recommend them to anyone looking for top-tier digital services.", authorImage: "https://images.unsplash.com/photo-1438761681033-6461FFAD8D80?q=80&w=2070&auto=format&fit=crop", authorName: "Emily Carter", authorTitle: "CEO, Innovate Co.", stars: 5 },
+  // ✅ Yahan maine ek lamba review daala hai, test karne ke liye
+  { id: 1, logo:"...", text: "The team transformed our brand's online presence with creativity and precision. The results exceeded our expectations! Their digital marketing strategies helped us reach a broader audience and significantly boosted our sales. The process was seamless. Their team is not only talented but also incredibly responsive. I would highly recommend them to anyone looking for top-tier digital services.", authorImage: "https://images.unsplash.com/photo-1599566150163-2DCAAD36?q=80&w=1887&auto=format&fit=crop", authorName: "Sarah Mitchell", authorTitle: "Marketing Director", stars: 5 },
+  { id: 2, logo: "...", text: "Working with this agency was a game-changer. Their innovative approach and dedication to our project were remarkable. We saw a significant increase in user engagement within the first month.", authorImage: "https://images.unsplash.com/photo-1507003211169-0A1DD7228F2D?q=80&w=1887&auto=format&fit=crop", authorName: "Johnathan Lee", authorTitle: "Product Manager", stars: 5 },
+  { id: 3, logo: "...", text: "From start to finish, the process was seamless...", authorImage: "https://images.unsplash.com/photo-1438761681033-6461FFAD8D80?q=80&w=2070&auto=format&fit=crop", authorName: "Emily Carter", authorTitle: "CEO, Innovate Co.", stars: 5 },
 ];
 
 const AGENCY_IMAGE_URL = "https://demo.awaikenthemes.com/artistics/wp-content/themes/artistics/assets/images/testimonial-bg-shape.png";
@@ -40,15 +41,13 @@ export default function Testimonials() {
 
   return (
     <section className="relative w-full bg-black text-white py-24 px-4 sm:px-8 font overflow-hidden">
-      {/* Background Effects */}
       <div className="absolute inset-0 z-0">
         <Glow position="left" size={600} customStyles={{ top: "700px" }} />
         <FloatingImage imageUrl={AGENCY_IMAGE_URL} position="right" opacity="opacity-30" />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* --- HEADING SECTION --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-24">
           <div data-aos="fade-right">
             <p className="flex items-center gap-2 text-xl font-bold tracking-widest uppercase mb-4">
               <span className="text-[#BFF747] text-2xl">*</span>TESTIMONIALS
@@ -58,8 +57,8 @@ export default function Testimonials() {
               <span className="text-[#BFF747] font-bold">working with us</span>
             </h1>
           </div>
-          <div className="flex flex-col items-start" data-aos="fade-left">
-            <p className="text-gray-300 leading-relaxed max-w-md text-left">
+          <div className="flex flex-col items-start lg:items-start" data-aos="fade-left">
+            <p className="text-gray-300 leading-relaxed max-w-md text-left lg:text-left">
               Join our creative community to collaborate, innovate, and thrive together. We welcome passionate individuals eager to make.
             </p>
             <div className="mt-10 flex items-center">
@@ -92,7 +91,11 @@ export default function Testimonials() {
           </div>
 
           {/* Right Testimonial Slider */}
-          <div className="w-full lg:w-3/5 relative min-h-[450px] sm:min-h-[420px] overflow-hidden" data-aos="fade-left">
+          {/* ✅✅✅ YEH SABSE BADA CHANGE HAI ✅✅✅ */}
+          <div 
+            className="relative w-full lg:w-3/5 h-[500px] sm:h-[450px] overflow-hidden" 
+            data-aos="fade-left"
+          >
             <AnimatePresence mode="popLayout">
               <motion.div
                 key={currentTestimonial.id}
@@ -100,20 +103,25 @@ export default function Testimonials() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -600, opacity: 0 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="absolute w-full h-full flex flex-col gap-6"
+                className="absolute w-full h-full flex flex-col gap-6 p-8"
               >
                 <div className="flex items-center gap-3">
-                    {/* ✅✅✅ YAHAN THEEK KAR DIYA GAYA HAI ✅✅✅ */}
-                    <img src={currentTestimonial.logo} alt="logo" className="w-10 h-10 rounded-full object-cover" />
-                    <span className="font-bold text-lg">Logoipsum</span>
+                  <img src={currentTestimonial.logo} alt="logo" className="w-10 h-10 rounded-full object-cover" />
+                  <span className="font-bold text-lg">Logoipsum</span>
                 </div>
-                <div className="flex items-center gap-1 text-xl text-[#BFF747] my-4">
+                <div className="flex items-center gap-1 text-xl text-[#BFF747]">
                   {[...Array(currentTestimonial.stars)].map((_, i) => <FaStar key={i} />)}
                 </div>
-                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed min-h-[160px] sm:min-h-[120px]">
-                  "{currentTestimonial.text}"
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
+                
+                {/* Review Text Container with Scroll */}
+                <div className="flex-grow overflow-y-auto pr-4"> {/* pr-4 scrollbar ke liye jagah banata hai */}
+                  <p className="text-xl md:text-2xl text-gray-300 leading-relaxed text-left">
+                    "{currentTestimonial.text}"
+                  </p>
+                </div>
+                
+                {/* Author Info and Buttons */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-auto pt-4"> {/* pt-4 se text aur buttons ke beech gap rahega */}
                   <div className="flex items-center gap-4">
                     <img src={currentTestimonial.authorImage} alt={currentTestimonial.authorName} className="w-16 h-16 rounded-full object-cover" />
                     <div>
@@ -131,20 +139,20 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* --- FEATURES GRID SECTION (RESPONSIVE) --- */}
+        {/* --- FEATURES GRID SECTION --- */}
         <div className="w-full max-w-7xl mx-auto" data-aos="fade-up">
           <div className="bg-[#1C1C1C] bg-opacity-65 rounded-2xl border border-white/10 p-4 sm:p-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:divide-x sm:divide-white/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y divide-gray-800 sm:divide-y-0 sm:divide-x sm:divide-gray-800">
               {featuresData.map((feature, index) => (
                 <div key={index} className="flex flex-col items-start text-start p-6">
                   <div className="text-lime-400 mb-6 text-5xl h-12">
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-5">{feature.title}</h3>
-                  <ul className="text-md w-full  text-white">
+                  <ul className="text-base text-gray-300 space-y-2">
                     {feature.points.map((point, i) => (
-                      <li key={i} className="flex items-start text-md">
-                        <span className="mr-2 mt-1 leading-none">*</span>
+                      <li key={i} className="flex items-start">
+                        <span className="text-lime-400 mr-2 mt-1 leading-none">*</span>
                         <span>{point}</span>
                       </li>
                     ))}
