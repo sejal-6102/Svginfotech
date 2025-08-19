@@ -45,7 +45,7 @@ export default function Navbar() {
             </div>
 
             <Link to="/" className="hover:text-[#BFF747] transition">Blogs</Link>
-            <Link to="/" className="hover:text-[#BFF747] transition">Contact</Link>
+            <Link to="/Contact" className="hover:text-[#BFF747] transition">Contact</Link>
           </div>
         </div>
 

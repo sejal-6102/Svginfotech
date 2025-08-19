@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './Pages/Home/Home';
+import Contactus from './Pages/Contactus/Contactus';
 
 
 function App() {
@@ -11,9 +12,9 @@ function App() {
       <Routes>
         {/* Example Route setup */}
         <Route path="/" element={<Home />} />
-        <Route path="/about" />
+        <Route path="/about" element={<Contactus />} />
         <Route path="/services" element={<h1>Services Page</h1>} />
-        <Route path="/contact" element={<h1>Contact Page</h1>} />
+        <Route path="/contact" element={<Contactus />} />
       </Routes>
       {/* <Footer/> */}
     </Router>
